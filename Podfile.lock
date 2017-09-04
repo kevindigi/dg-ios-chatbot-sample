@@ -7,19 +7,28 @@ PODS:
     - ApiAI/VoiceRequest
   - ApiAI/VoiceRequest (0.7.0):
     - ApiAI/Core
+  - JSQMessagesViewController (7.3.4):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - MBProgressHUD (1.0.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - ApiAI/Core
   - ApiAI/ResponseMapping
   - ApiAI/UIKit
   - ApiAI/VoiceRequest
+  - JSQMessagesViewController
   - MBProgressHUD
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   ApiAI: 25f763ddd88139dc5fe6794a905300244190d168
+  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 3eb2ba051d5fa12a2bfbcfbd21d8a77a9e7e6ebd
+PODFILE CHECKSUM: 808a289ee6e81534e6e8579761e3018a07ac7c7f
 
 COCOAPODS: 1.2.1

@@ -6,9 +6,11 @@ target 'DGChatbotSample' do
   use_frameworks!
 
   # Pods for DGChatbotSample
-pod 'ApiAI/Core' #, :path => '../'
-pod 'ApiAI/VoiceRequest' #, :path => '../'
-pod 'ApiAI/UIKit' #, :path => '../'
-pod 'ApiAI/ResponseMapping' #, :path => '../'
-pod 'MBProgressHUD'
+  pod 'ApiAI/Core' #, :path => '../'
+  pod 'ApiAI/VoiceRequest' #, :path => '../'
+  pod 'ApiAI/UIKit' #, :path => '../'
+  pod 'ApiAI/ResponseMapping' #, :path => '../'
+  pod 'MBProgressHUD'
+  pod 'JSQMessagesViewController'
+  pod 'SwiftyJSON'
 end
