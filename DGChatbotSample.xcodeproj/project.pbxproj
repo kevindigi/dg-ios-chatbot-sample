@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		7A2CF6754C9F5DE2256B56D7 /* Pods_DGChatbotSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759F7698553F13D009689405 /* Pods_DGChatbotSample.framework */; };
+		E222374C1F5E7063006076F1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222374B1F5E7063006076F1 /* MainVC.swift */; };
+		E22237511F5E7D93006076F1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237501F5E7D93006076F1 /* Chat.swift */; };
+		E22237531F5E8327006076F1 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */; };
+		E22237551F5E9909006076F1 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237541F5E9909006076F1 /* ChatTableViewCell.swift */; };
+		E22237581F5E9FEE006076F1 /* JSQCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237571F5E9FEE006076F1 /* JSQCardItem.swift */; };
 		E2685D871F5D23560010455D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2685D861F5D23560010455D /* AppDelegate.swift */; };
 		E2685D891F5D23560010455D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2685D881F5D23560010455D /* ViewController.swift */; };
 		E2685D8C1F5D23560010455D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2685D8A1F5D23560010455D /* Main.storyboard */; };
 		E2685D8E1F5D23560010455D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2685D8D1F5D23560010455D /* Assets.xcassets */; };
 		E2685D911F5D23560010455D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2685D8F1F5D23560010455D /* LaunchScreen.storyboard */; };
+		E2685D9C1F5D598E0010455D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2685D9B1F5D598E0010455D /* CardCell.swift */; };
+		E2685DA21F5D6FA10010455D /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2685DA11F5D6FA10010455D /* CardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CF6AF2E16C30990FDD837FF /* Pods-DGChatbotSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGChatbotSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DGChatbotSample/Pods-DGChatbotSample.release.xcconfig"; sourceTree = "<group>"; };
 		759F7698553F13D009689405 /* Pods_DGChatbotSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGChatbotSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFE283F9F51B915CC0530FE /* Pods-DGChatbotSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGChatbotSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DGChatbotSample/Pods-DGChatbotSample.debug.xcconfig"; sourceTree = "<group>"; };
+		E222374B1F5E7063006076F1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E22237501F5E7D93006076F1 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		E22237541F5E9909006076F1 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		E22237571F5E9FEE006076F1 /* JSQCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQCardItem.swift; sourceTree = "<group>"; };
 		E2685D831F5D23560010455D /* DGChatbotSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGChatbotSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2685D861F5D23560010455D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2685D881F5D23560010455D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +38,8 @@
 		E2685D8D1F5D23560010455D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2685D901F5D23560010455D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2685D921F5D23560010455D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2685D9B1F5D598E0010455D /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		E2685DA11F5D6FA10010455D /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E22237561F5E9F28006076F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E22237571F5E9FEE006076F1 /* JSQCardItem.swift */,
+				E22237501F5E7D93006076F1 /* Chat.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		E2685D7A1F5D23560010455D = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +102,27 @@
 			isa = PBXGroup;
 			children = (
 				E2685D861F5D23560010455D /* AppDelegate.swift */,
+				E222374B1F5E7063006076F1 /* MainVC.swift */,
 				E2685D881F5D23560010455D /* ViewController.swift */,
 				E2685D8A1F5D23560010455D /* Main.storyboard */,
 				E2685D8D1F5D23560010455D /* Assets.xcassets */,
 				E2685D8F1F5D23560010455D /* LaunchScreen.storyboard */,
 				E2685D921F5D23560010455D /* Info.plist */,
+				E2685D9D1F5D59930010455D /* cells */,
+				E22237561F5E9F28006076F1 /* model */,
 			);
 			path = DGChatbotSample;
+			sourceTree = "<group>";
+		};
+		E2685D9D1F5D59930010455D /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				E22237541F5E9909006076F1 /* ChatTableViewCell.swift */,
+				E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */,
+				E2685D9B1F5D598E0010455D /* CardCell.swift */,
+				E2685DA11F5D6FA10010455D /* CardCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +190,7 @@
 				E2685D911F5D23560010455D /* LaunchScreen.storyboard in Resources */,
 				E2685D8E1F5D23560010455D /* Assets.xcassets in Resources */,
 				E2685D8C1F5D23560010455D /* Main.storyboard in Resources */,
+				E2685DA21F5D6FA10010455D /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2685D891F5D23560010455D /* ViewController.swift in Sources */,
+				E22237511F5E7D93006076F1 /* Chat.swift in Sources */,
+				E22237531F5E8327006076F1 /* ChatCollectionViewCell.swift in Sources */,
+				E22237581F5E9FEE006076F1 /* JSQCardItem.swift in Sources */,
 				E2685D871F5D23560010455D /* AppDelegate.swift in Sources */,
+				E222374C1F5E7063006076F1 /* MainVC.swift in Sources */,
+				E22237551F5E9909006076F1 /* ChatTableViewCell.swift in Sources */,
+				E2685D9C1F5D598E0010455D /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

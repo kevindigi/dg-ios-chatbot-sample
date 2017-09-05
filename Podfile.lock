@@ -11,6 +11,9 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - MBProgressHUD (1.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - ApiAI/VoiceRequest
   - JSQMessagesViewController
   - MBProgressHUD
+  - SDWebImage (~> 4.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -27,8 +31,9 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 808a289ee6e81534e6e8579761e3018a07ac7c7f
+PODFILE CHECKSUM: 2488c296e2a9b29570dd04708d6243d784074228
 
 COCOAPODS: 1.2.1

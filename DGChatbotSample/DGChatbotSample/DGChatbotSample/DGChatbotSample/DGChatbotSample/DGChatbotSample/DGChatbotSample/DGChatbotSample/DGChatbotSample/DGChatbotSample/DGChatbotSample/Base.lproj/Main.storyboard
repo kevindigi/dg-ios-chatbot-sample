@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SQh-Bn-S6c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gno-jD-qVe">
+            <objects>
+                <navigationController id="SQh-Bn-S6c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXt-LQ-ggs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xHT-vm-her" kind="relationship" relationship="rootViewController" id="Fq6-rX-Wwi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGI-nN-z8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="170"/>
+        </scene>
+        <!--Main CollectionVC-->
+        <scene sceneID="Zsh-E9-o5K">
+            <objects>
+                <viewController id="xHT-vm-her" customClass="MainCollectionVC" customModule="DGChatbotSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWw-pF-htO"/>
+                        <viewControllerLayoutGuide type="bottom" id="LVP-hL-RpH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gVT-Zw-K1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-14-Zhf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pkf-9a-iys">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="REK-Uh-g6Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUy-Ex-Xor">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="LNP-hf-m98"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t5z-14-Zhf" firstAttribute="leading" secondItem="gVT-Zw-K1u" secondAttribute="leading" id="D8Q-GC-FhC"/>
+                            <constraint firstItem="t5z-14-Zhf" firstAttribute="top" secondItem="eWw-pF-htO" secondAttribute="bottom" id="IZt-dA-lmL"/>
+                            <constraint firstItem="vUy-Ex-Xor" firstAttribute="leading" secondItem="gVT-Zw-K1u" secondAttribute="leading" id="gVf-8Q-tvm"/>
+                            <constraint firstItem="LVP-hL-RpH" firstAttribute="top" secondItem="vUy-Ex-Xor" secondAttribute="bottom" id="h2L-wU-cvr"/>
+                            <constraint firstAttribute="trailing" secondItem="vUy-Ex-Xor" secondAttribute="trailing" id="pgb-ZI-ljk"/>
+                            <constraint firstItem="vUy-Ex-Xor" firstAttribute="top" secondItem="t5z-14-Zhf" secondAttribute="bottom" id="wjC-2r-3d3"/>
+                            <constraint firstAttribute="trailing" secondItem="t5z-14-Zhf" secondAttribute="trailing" id="wuf-ca-5XE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bPh-dz-zCg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0f-Xz-CmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="170"/>
+        </scene>
+        <!--Chatbot Sample-->
+        <scene sceneID="gtJ-OP-MAm">
+            <objects>
+                <viewController id="pUo-3i-wA5" customClass="ViewController" customModule="DGChatbotSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HA8-fQ-sA8"/>
+                        <viewControllerLayoutGuide type="bottom" id="PPY-TY-KM5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uPS-hw-Pmj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chatbot Sample" id="g8W-ku-PhS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAq-GG-8MQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="170"/>
+        </scene>
+    </scenes>
+</document>

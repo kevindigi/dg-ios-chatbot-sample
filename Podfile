@@ -13,4 +13,5 @@ target 'DGChatbotSample' do
   pod 'MBProgressHUD'
   pod 'JSQMessagesViewController'
   pod 'SwiftyJSON'
+  pod 'SDWebImage', '~> 4.0'
 end
