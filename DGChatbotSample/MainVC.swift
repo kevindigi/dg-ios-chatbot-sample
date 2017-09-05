@@ -70,16 +70,21 @@ class MainVC: UIViewController {
     private func endSendingChat() {
         txtQuestion.text = ""
         textViewDidChange(txtQuestion)
-        scrollTableToEnd()
+        let indexPath = IndexPath(row: chatData.count-1, section: 0)
+        updateTableInsertion(indexPaths: [indexPath])
+        tblChat.scrollToRow(at: indexPath, at: .top, animated: true)
     }
     
-    private func endReceivingChat() {
-        scrollTableToEnd()
+    private func endReceivingChat(indexPaths: [IndexPath]) {
+        updateTableInsertion(indexPaths: indexPaths)
+        tblChat.scrollToRow(at: indexPaths[0], at: .top, animated: true)
     }
     
-    private func scrollTableToEnd() {
+    private func updateTableInsertion(indexPaths: [IndexPath]) {
+        tblChat.beginUpdates()
+        tblChat.insertRows(at: indexPaths, with: UITableViewRowAnimation.top)
+        tblChat.endUpdates()
         tblChat.reloadData()
-        tblChat.scrollToRow(at: IndexPath(row: chatData.count - 1, section: 0), at: .bottom, animated: true)
     }
     
     private func sendChatRequestToBot(with text: String, cb: @escaping ChatbotResponseCallback) {
@@ -120,8 +125,9 @@ class MainVC: UIViewController {
     // MARK: - IBActions
     
     @IBAction func sendAction(_ sender: UIButton) {
-        let chat = Chat(senderId: userId, senderDisplayName: "Kevin", message: txtQuestion.text, date: Date(), chatType: ChatType.simple)
+        let chat = Chat(senderId: userId, senderDisplayName: "Kevin", message: txtQuestion.text, date: Date())
         chatData.append(chat)
+        
         endSendingChat()
         
         sendChatRequestToBot(with: chat.message) { (request, error, response) in
@@ -131,21 +137,24 @@ class MainVC: UIViewController {
             }
             
             let replyMessages = response["result"]["fulfillment"]["messages"].arrayValue
+            var indexPaths:[IndexPath] = []
             for replyMessage in replyMessages {
                 switch replyMessage["type"].intValue {
                 case 0: // simple text message
                     if replyMessage["speech"].stringValue.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 {
-                        let botChat = Chat(senderId: self.botId, senderDisplayName: "Bot", message: replyMessage["speech"].stringValue, date: Date(), chatType: ChatType.simple)
+                        let botChat = Chat(senderId: self.botId, senderDisplayName: "Bot", message: replyMessage["speech"].stringValue, date: Date())
                         self.chatData.append(botChat)
-                        self.endReceivingChat()
+                        indexPaths.append(IndexPath(row: self.chatData.count-1, section: 0))
                     }
-                /*case 1: // card message
-                    let botReplyMessage = JSQCardItem(senderId: "db_bot", senderDisplayName: "DG-CHATBOT", date: Date(), imageUrl: replyMessage["imageUrl"].string, textDescription: replyMessage["title"].stringValue, action1Text: replyMessage["buttons"][0]["text"].stringValue, action1Url: replyMessage["buttons"][0]["postback"].stringValue)
-                    self.messages.append(botReplyMessage)*/
+                case 1: // card message
+                    let botChat = Chat(senderId: self.botId, senderDisplayName: "Bot", cardImageUrl: replyMessage["imageUrl"].string, message: replyMessage["title"].stringValue, cardActionTitle: replyMessage["buttons"][0]["text"].stringValue, cardActionUrl: replyMessage["buttons"][0]["postback"].stringValue, date: Date())
+                    self.chatData.append(botChat)
+                    indexPaths.append(IndexPath(row: self.chatData.count-1, section: 0))
                 default:
-                    print("will handle other message cases later")
+                    print("will consider other types later")
                 }
             }
+            self.endReceivingChat(indexPaths: indexPaths)
         }
     }
     
@@ -155,6 +164,23 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func cellReuseIdentifier(for chat: Chat) -> String {
+        var reuseIdentifier = ""
+        if chat.senderId == userId {
+            reuseIdentifier = "UserSimpleCell"
+        } else {
+            // bot chat
+            switch chat.chatType {
+            case .card:
+                reuseIdentifier = "BotCardCell"
+            default:
+                reuseIdentifier = "BotSimpleCell"
+            }
+        }
+        return reuseIdentifier
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.chatData.count
     }
@@ -162,15 +188,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let chat = self.chatData[indexPath.row]
-        
-        var reuseIdentifier = ""
-        if chat.senderId == userId {
-            reuseIdentifier = "UserCell"
-        } else {
-            reuseIdentifier = "BotCellType1"
-        }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ChatTableViewCell
+        let reuseIdentifier = cellReuseIdentifier(for: chat)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ChatBaseTableViewCell
         cell.update(chat)
         return cell
     }

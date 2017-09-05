@@ -11,8 +11,10 @@
 		E222374C1F5E7063006076F1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222374B1F5E7063006076F1 /* MainVC.swift */; };
 		E22237511F5E7D93006076F1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237501F5E7D93006076F1 /* Chat.swift */; };
 		E22237531F5E8327006076F1 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */; };
-		E22237551F5E9909006076F1 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237541F5E9909006076F1 /* ChatTableViewCell.swift */; };
+		E22237551F5E9909006076F1 /* ChatSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237541F5E9909006076F1 /* ChatSimpleTableViewCell.swift */; };
 		E22237581F5E9FEE006076F1 /* JSQCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237571F5E9FEE006076F1 /* JSQCardItem.swift */; };
+		E222375A1F5EA56E006076F1 /* ChatCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22237591F5EA56E006076F1 /* ChatCardTableViewCell.swift */; };
+		E222375C1F5EA9B6006076F1 /* ChatBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222375B1F5EA9B6006076F1 /* ChatBaseTableViewCell.swift */; };
 		E2685D871F5D23560010455D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2685D861F5D23560010455D /* AppDelegate.swift */; };
 		E2685D891F5D23560010455D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2685D881F5D23560010455D /* ViewController.swift */; };
 		E2685D8C1F5D23560010455D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2685D8A1F5D23560010455D /* Main.storyboard */; };
@@ -29,8 +31,10 @@
 		E222374B1F5E7063006076F1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E22237501F5E7D93006076F1 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
-		E22237541F5E9909006076F1 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		E22237541F5E9909006076F1 /* ChatSimpleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSimpleTableViewCell.swift; sourceTree = "<group>"; };
 		E22237571F5E9FEE006076F1 /* JSQCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQCardItem.swift; sourceTree = "<group>"; };
+		E22237591F5EA56E006076F1 /* ChatCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCardTableViewCell.swift; sourceTree = "<group>"; };
+		E222375B1F5EA9B6006076F1 /* ChatBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBaseTableViewCell.swift; sourceTree = "<group>"; };
 		E2685D831F5D23560010455D /* DGChatbotSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGChatbotSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2685D861F5D23560010455D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2685D881F5D23560010455D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +121,9 @@
 		E2685D9D1F5D59930010455D /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				E22237541F5E9909006076F1 /* ChatTableViewCell.swift */,
+				E222375B1F5EA9B6006076F1 /* ChatBaseTableViewCell.swift */,
+				E22237541F5E9909006076F1 /* ChatSimpleTableViewCell.swift */,
+				E22237591F5EA56E006076F1 /* ChatCardTableViewCell.swift */,
 				E22237521F5E8327006076F1 /* ChatCollectionViewCell.swift */,
 				E2685D9B1F5D598E0010455D /* CardCell.swift */,
 				E2685DA11F5D6FA10010455D /* CardCell.xib */,
@@ -249,13 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E222375C1F5EA9B6006076F1 /* ChatBaseTableViewCell.swift in Sources */,
 				E2685D891F5D23560010455D /* ViewController.swift in Sources */,
+				E222375A1F5EA56E006076F1 /* ChatCardTableViewCell.swift in Sources */,
 				E22237511F5E7D93006076F1 /* Chat.swift in Sources */,
 				E22237531F5E8327006076F1 /* ChatCollectionViewCell.swift in Sources */,
 				E22237581F5E9FEE006076F1 /* JSQCardItem.swift in Sources */,
 				E2685D871F5D23560010455D /* AppDelegate.swift in Sources */,
 				E222374C1F5E7063006076F1 /* MainVC.swift in Sources */,
-				E22237551F5E9909006076F1 /* ChatTableViewCell.swift in Sources */,
+				E22237551F5E9909006076F1 /* ChatSimpleTableViewCell.swift in Sources */,
 				E2685D9C1F5D598E0010455D /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

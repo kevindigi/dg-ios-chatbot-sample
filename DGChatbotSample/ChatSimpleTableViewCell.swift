@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
+class ChatSimpleTableViewCell: ChatBaseTableViewCell {
     @IBOutlet weak var lblChat: UILabel!
     
-    func update(_ chat: Chat) {
-        lblChat.text = chat.message
+    override func update(_ chat: Chat?) {
+        super.update(chat)
+        lblChat.text = chat?.message
     }
 }

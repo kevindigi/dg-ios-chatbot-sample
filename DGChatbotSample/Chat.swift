@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ChatType {
+enum ChatType {
     case simple
     case card
 }
@@ -18,17 +18,30 @@ struct Chat {
     var senderDisplayName: String!
     var date:Date?
     var message: String!
-    var chatType: ChatType!
+    private(set) var chatType: ChatType
     
     var cardImageUrl: String?
     var cardActionTitle: String?
     var cardActionUrl: String?
     
-    init(senderId: String!, senderDisplayName: String!, message: String!, date: Date!, chatType: ChatType!) {
+    init(senderId: String!, senderDisplayName: String!, message: String!, date: Date!) {
         self.senderId = senderId
         self.senderDisplayName = senderDisplayName
         self.message = message
         self.date = date
-        self.chatType = chatType
+        self.chatType = .simple
+    }
+    
+    init(senderId: String!, senderDisplayName: String!, cardImageUrl: String?, message: String!, cardActionTitle: String?, cardActionUrl: String?, date: Date!) {
+        
+        self.senderId = senderId
+        self.senderDisplayName = senderDisplayName
+        self.message = message
+        self.date = date
+        self.chatType = .card
+        
+        self.cardImageUrl = cardImageUrl
+        self.cardActionTitle = cardActionTitle
+        self.cardActionUrl = cardActionUrl
     }
 }

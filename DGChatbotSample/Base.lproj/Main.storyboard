@@ -48,17 +48,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8WT-pb-4O0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="530"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="529.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BotCellType1" id="qJ7-CX-JjJ" customClass="ChatTableViewCell" customModule="DGChatbotSample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BotSimpleCell" id="qJ7-CX-JjJ" customClass="ChatSimpleTableViewCell" customModule="DGChatbotSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJ7-CX-JjJ" id="Uzl-FW-cnT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tommie_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JRb-DQ-ahh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JRb-DQ-ahh">
                                                     <rect key="frame" x="8" y="6" width="32" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="32" id="IWX-1g-Uj0"/>
@@ -95,8 +95,73 @@
                                             <outlet property="lblChat" destination="40h-c9-9tO" id="7ns-XO-9hf"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserCell" id="uDD-7N-DU6" customClass="ChatTableViewCell" customModule="DGChatbotSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BotCardCell" rowHeight="297" id="S58-3C-GLP" customClass="ChatCardTableViewCell" customModule="DGChatbotSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="297"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S58-3C-GLP" id="Ph8-z6-rA4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="iwI-GI-Pdh">
+                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="SOr-if-VTT"/>
+                                                        <constraint firstAttribute="width" constant="32" id="bLh-zU-Ci2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat-bubble-tommie" translatesAutoresizingMaskIntoConstraints="NO" id="RmX-Lc-w5y">
+                                                    <rect key="frame" x="31" y="2" width="226" height="288"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="f6z-v0-4IE">
+                                                    <rect key="frame" x="61" y="16" width="180" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="CdU-BV-fgD"/>
+                                                        <constraint firstAttribute="width" constant="180" id="G6Y-oK-0qd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="TestTestTestTestTestTestTest TestTestTestTestTestTestTest TestTestTestTestTestTestTest TestTestTestTestTestTestTest " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1om-cW-Jbe">
+                                                    <rect key="frame" x="61" y="174" width="180" height="69"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="2wg-XP-5Bm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                    <color key="textColor" red="0.01176470588" green="0.23921568630000001" blue="0.29803921570000003" alpha="0.87" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rR-VV-KEe">
+                                                    <rect key="frame" x="61" y="251" width="180" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="cardAction:" destination="S58-3C-GLP" eventType="touchUpInside" id="mVk-Gn-UhO"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1om-cW-Jbe" firstAttribute="top" secondItem="f6z-v0-4IE" secondAttribute="bottom" constant="8" id="2PD-yI-SYV"/>
+                                                <constraint firstItem="RmX-Lc-w5y" firstAttribute="trailing" secondItem="f6z-v0-4IE" secondAttribute="trailing" constant="16" id="4wA-Rj-mdY"/>
+                                                <constraint firstItem="1om-cW-Jbe" firstAttribute="leading" secondItem="RmX-Lc-w5y" secondAttribute="leading" constant="30" id="8SP-uS-JH1"/>
+                                                <constraint firstItem="RmX-Lc-w5y" firstAttribute="leading" secondItem="iwI-GI-Pdh" secondAttribute="trailing" constant="-9" id="BN3-Uf-ecs"/>
+                                                <constraint firstAttribute="bottom" secondItem="RmX-Lc-w5y" secondAttribute="bottom" constant="7" id="CPe-Z8-SNF"/>
+                                                <constraint firstItem="7rR-VV-KEe" firstAttribute="top" secondItem="1om-cW-Jbe" secondAttribute="bottom" constant="8" id="DX7-Dd-qwc"/>
+                                                <constraint firstItem="1om-cW-Jbe" firstAttribute="width" secondItem="f6z-v0-4IE" secondAttribute="width" id="Fhe-K1-6QN"/>
+                                                <constraint firstItem="f6z-v0-4IE" firstAttribute="top" secondItem="Ph8-z6-rA4" secondAttribute="topMargin" constant="8" id="QPV-Bz-tky"/>
+                                                <constraint firstItem="RmX-Lc-w5y" firstAttribute="top" secondItem="Ph8-z6-rA4" secondAttribute="top" constant="2" id="R4H-nU-yTF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7rR-VV-KEe" secondAttribute="bottom" constant="8" id="abg-v7-qto"/>
+                                                <constraint firstItem="f6z-v0-4IE" firstAttribute="leading" secondItem="iwI-GI-Pdh" secondAttribute="trailing" constant="21" id="eCp-7Z-ggr"/>
+                                                <constraint firstItem="7rR-VV-KEe" firstAttribute="trailing" secondItem="1om-cW-Jbe" secondAttribute="trailing" id="gPH-Pq-GV2"/>
+                                                <constraint firstItem="iwI-GI-Pdh" firstAttribute="top" secondItem="Ph8-z6-rA4" secondAttribute="top" constant="6" id="hym-k3-QdQ"/>
+                                                <constraint firstItem="iwI-GI-Pdh" firstAttribute="leading" secondItem="Ph8-z6-rA4" secondAttribute="leading" constant="8" id="ine-nE-pbf"/>
+                                                <constraint firstItem="7rR-VV-KEe" firstAttribute="leading" secondItem="1om-cW-Jbe" secondAttribute="leading" id="rUu-O1-16F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnCardAction" destination="7rR-VV-KEe" id="5iM-km-a7K"/>
+                                            <outlet property="imgCard" destination="f6z-v0-4IE" id="NQG-Zb-0bS"/>
+                                            <outlet property="lblChat" destination="1om-cW-Jbe" id="RRv-fv-OuT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserSimpleCell" id="uDD-7N-DU6" customClass="ChatSimpleTableViewCell" customModule="DGChatbotSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="369" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDD-7N-DU6" id="4tL-ho-Ueu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -146,10 +211,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydt-fC-Wcc" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
+                                <rect key="frame" x="0.0" y="593.5" width="375" height="73.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom-bar-background" translatesAutoresizingMaskIntoConstraints="NO" id="0Vw-Ci-rsu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="YMh-Sd-Udw">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
@@ -157,11 +222,11 @@
                                             <constraint firstAttribute="height" constant="2" id="msW-Jd-skF"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="lastBaseline" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sMF-9W-aPU">
-                                        <rect key="frame" x="12" y="13" width="351" height="47"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sMF-9W-aPU">
+                                        <rect key="frame" x="12" y="13" width="351" height="49.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-Kp-iM5" userLabel="call Button">
-                                                <rect key="frame" x="0.0" y="3" width="44" height="44"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="NJp-Oo-bAw"/>
                                                     <constraint firstAttribute="width" constant="44" id="jae-67-P7W"/>
@@ -172,13 +237,13 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69u-FQ-8p3" userLabel="question view">
-                                                <rect key="frame" x="56" y="0.0" width="239" height="47"/>
+                                                <rect key="frame" x="56" y="0.0" width="239" height="49.5"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MJS-tD-eUN">
-                                                        <rect key="frame" x="10" y="6.5" width="219" height="34"/>
+                                                        <rect key="frame" x="10" y="6.5" width="219" height="36"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="34" id="BCY-oW-EIM"/>
+                                                            <constraint firstAttribute="height" constant="36" id="BCY-oW-EIM"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.01176470588" green="0.23921568630000001" blue="0.29803921570000003" alpha="0.87" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
@@ -190,11 +255,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="MJS-tD-eUN" firstAttribute="top" secondItem="69u-FQ-8p3" secondAttribute="top" constant="6.5" id="1q7-ro-fFf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MJS-tD-eUN" secondAttribute="trailing" constant="10" id="Ctq-4A-nS3"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="XC3-ZR-ajf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="MJS-tD-eUN" secondAttribute="bottom" constant="6.5" id="d8c-Jb-8ie"/>
-                                                    <constraint firstItem="MJS-tD-eUN" firstAttribute="leading" secondItem="69u-FQ-8p3" secondAttribute="leading" constant="10" id="jeF-TY-6LL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MJS-tD-eUN" secondAttribute="bottom" constant="7" id="0bn-4I-hxm"/>
+                                                    <constraint firstItem="MJS-tD-eUN" firstAttribute="top" secondItem="69u-FQ-8p3" secondAttribute="top" constant="7" id="Af2-LG-iXm"/>
+                                                    <constraint firstItem="MJS-tD-eUN" firstAttribute="leading" secondItem="69u-FQ-8p3" secondAttribute="leading" constant="10" id="FkY-Hq-Hze"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MJS-tD-eUN" secondAttribute="trailing" constant="10" id="x06-1U-e9F"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -208,25 +272,24 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUy-cZ-LDS">
-                                                <rect key="frame" x="307" y="7.5" width="44" height="47"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-0M-jvb" userLabel="call Button">
+                                                <rect key="frame" x="307" y="5.5" width="44" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="47" id="ctU-lB-7oR"/>
-                                                    <constraint firstAttribute="width" constant="44" id="n9A-5G-tIy"/>
+                                                    <constraint firstAttribute="width" constant="44" id="7Dv-cb-IZn"/>
+                                                    <constraint firstAttribute="height" constant="44" id="9iV-sB-qKN"/>
                                                 </constraints>
                                                 <state key="normal" image="ic_btn_send_active"/>
                                                 <state key="disabled" image="ic_btn_send"/>
                                                 <connections>
-                                                    <action selector="sendAction:" destination="xHT-vm-her" eventType="touchUpInside" id="QfY-AH-BuT"/>
+                                                    <action selector="sendAction:" destination="xHT-vm-her" eventType="touchUpInside" id="myW-LS-lOy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="69u-FQ-8p3" firstAttribute="top" secondItem="sMF-9W-aPU" secondAttribute="top" id="9lb-NX-FG6"/>
-                                            <constraint firstAttribute="bottom" secondItem="69u-FQ-8p3" secondAttribute="bottom" id="O1O-bz-26y"/>
-                                            <constraint firstAttribute="trailing" secondItem="EUy-cZ-LDS" secondAttribute="trailing" id="R55-hs-LSv"/>
-                                            <constraint firstItem="EUy-cZ-LDS" firstAttribute="leading" secondItem="69u-FQ-8p3" secondAttribute="trailing" constant="12" id="RaT-b2-GgQ"/>
-                                            <constraint firstItem="69u-FQ-8p3" firstAttribute="leading" secondItem="vSy-Kp-iM5" secondAttribute="trailing" constant="12" id="U0d-1j-cfZ"/>
+                                            <constraint firstItem="69u-FQ-8p3" firstAttribute="leading" secondItem="vSy-Kp-iM5" secondAttribute="trailing" constant="12" id="G39-ni-sVW"/>
+                                            <constraint firstItem="t4k-0M-jvb" firstAttribute="leading" secondItem="69u-FQ-8p3" secondAttribute="trailing" constant="12" id="GtY-Y7-774"/>
+                                            <constraint firstAttribute="bottom" secondItem="69u-FQ-8p3" secondAttribute="bottom" id="iTc-NC-SYy"/>
+                                            <constraint firstItem="69u-FQ-8p3" firstAttribute="top" secondItem="sMF-9W-aPU" secondAttribute="top" id="x8s-zy-kx5"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -235,7 +298,7 @@
                                     <constraint firstItem="YMh-Sd-Udw" firstAttribute="top" secondItem="ydt-fC-Wcc" secondAttribute="top" id="4u5-Qo-Be0"/>
                                     <constraint firstItem="sMF-9W-aPU" firstAttribute="leading" secondItem="ydt-fC-Wcc" secondAttribute="leading" constant="12" id="6Fb-cS-jwW"/>
                                     <constraint firstAttribute="trailing" secondItem="sMF-9W-aPU" secondAttribute="trailing" constant="12" id="N5C-ag-VkS"/>
-                                    <constraint firstAttribute="bottom" secondItem="sMF-9W-aPU" secondAttribute="bottom" constant="13" id="P9X-VQ-wxS"/>
+                                    <constraint firstAttribute="bottom" secondItem="sMF-9W-aPU" secondAttribute="bottom" constant="11" id="P9X-VQ-wxS"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="WbA-co-uRo"/>
                                     <constraint firstItem="0Vw-Ci-rsu" firstAttribute="top" secondItem="ydt-fC-Wcc" secondAttribute="top" id="g2j-b4-Ea5"/>
                                     <constraint firstAttribute="bottom" secondItem="0Vw-Ci-rsu" secondAttribute="bottom" id="oYw-fP-2Se"/>
@@ -261,7 +324,7 @@
                     <navigationItem key="navigationItem" title="Chatbot Sample" id="bPh-dz-zCg"/>
                     <connections>
                         <outlet property="btnHideKeyboard" destination="vSy-Kp-iM5" id="ag6-ju-ssZ"/>
-                        <outlet property="btnSend" destination="EUy-cZ-LDS" id="Rsu-Ac-siu"/>
+                        <outlet property="btnSend" destination="t4k-0M-jvb" id="7Xl-Xs-of3"/>
                         <outlet property="tblChat" destination="8WT-pb-4O0" id="GCi-4J-M9y"/>
                         <outlet property="txtQuestion" destination="MJS-tD-eUN" id="OhL-rG-bZH"/>
                         <outlet property="txtQuestionHeightConstraint" destination="BCY-oW-EIM" id="1Lu-pT-m0A"/>
@@ -299,7 +362,6 @@
         <image name="chat-bubble-user" width="83" height="47"/>
         <image name="ic_btn_send" width="32" height="32"/>
         <image name="ic_btn_send_active" width="32" height="32"/>
-        <image name="ic_tommie_avatar" width="96" height="96"/>
         <image name="ic_user_avatar" width="97" height="96"/>
         <image name="up_shadow" width="540" height="5"/>
     </resources>
