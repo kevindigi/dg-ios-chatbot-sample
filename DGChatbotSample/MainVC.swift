@@ -53,6 +53,15 @@ class MainVC: UIViewController {
     private func setupControls() {
         tblChat.rowHeight = UITableViewAutomaticDimension
         tblChat.estimatedRowHeight = 44
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        txtQuestion.resignFirstResponder()
     }
     
     private func addKeyboardNotifications() {
@@ -156,10 +165,6 @@ class MainVC: UIViewController {
             }
             self.endReceivingChat(indexPaths: indexPaths)
         }
-    }
-    
-    @IBAction func hideKeyboardAction(_ sender: UIButton) {
-        txtQuestion.resignFirstResponder()
     }
 }
 

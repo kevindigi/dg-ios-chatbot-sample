@@ -225,22 +225,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sMF-9W-aPU">
                                         <rect key="frame" x="12" y="13" width="351" height="49.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-Kp-iM5" userLabel="call Button">
-                                                <rect key="frame" x="0.0" y="5.5" width="44" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="NJp-Oo-bAw"/>
-                                                    <constraint firstAttribute="width" constant="44" id="jae-67-P7W"/>
-                                                </constraints>
-                                                <state key="normal" image="ic_btn_send"/>
-                                                <connections>
-                                                    <action selector="hideKeyboardAction:" destination="xHT-vm-her" eventType="touchUpInside" id="nb5-mg-KcA"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69u-FQ-8p3" userLabel="question view">
-                                                <rect key="frame" x="56" y="0.0" width="239" height="49.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="49.5"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MJS-tD-eUN">
-                                                        <rect key="frame" x="10" y="6.5" width="219" height="36"/>
+                                                        <rect key="frame" x="10" y="6.5" width="275" height="36"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="BCY-oW-EIM"/>
@@ -286,7 +275,6 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="69u-FQ-8p3" firstAttribute="leading" secondItem="vSy-Kp-iM5" secondAttribute="trailing" constant="12" id="G39-ni-sVW"/>
                                             <constraint firstItem="t4k-0M-jvb" firstAttribute="leading" secondItem="69u-FQ-8p3" secondAttribute="trailing" constant="12" id="GtY-Y7-774"/>
                                             <constraint firstAttribute="bottom" secondItem="69u-FQ-8p3" secondAttribute="bottom" id="iTc-NC-SYy"/>
                                             <constraint firstItem="69u-FQ-8p3" firstAttribute="top" secondItem="sMF-9W-aPU" secondAttribute="top" id="x8s-zy-kx5"/>
@@ -323,7 +311,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chatbot Sample" id="bPh-dz-zCg"/>
                     <connections>
-                        <outlet property="btnHideKeyboard" destination="vSy-Kp-iM5" id="ag6-ju-ssZ"/>
                         <outlet property="btnSend" destination="t4k-0M-jvb" id="7Xl-Xs-of3"/>
                         <outlet property="tblChat" destination="8WT-pb-4O0" id="GCi-4J-M9y"/>
                         <outlet property="txtQuestion" destination="MJS-tD-eUN" id="OhL-rG-bZH"/>
